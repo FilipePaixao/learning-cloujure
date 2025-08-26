@@ -5,10 +5,15 @@
 (def spacedString "      Teste trim method")
 (def myCompleteName "Filipe,Paixão")
 
+;; principal diferença entre defn = uma função "padrao" que recebe algo como parametro e retorna algo baseado naquilo que recebeu
+;; e def = uma vriavel imutavel que pode receber uma função ou um valor
 
 (defn splitStrings [params]
 (println(str/split params #","))) ;; Separa dois caracters por virgula e transforma em um array.
 ;; #"," é uma regex que serve para definir qual o parametro da separação do caracteres
+
+(defn myNameLength[params]
+(println(count params))) ;; Conta quantos caracteres tem na string
 
 (def myNameCapitalize
 (str/capitalize myName)) ;; Transforma o primeiro caracter em upper case
@@ -33,4 +38,7 @@
   (println concat)
   (println normalizeString)
   (splitStrings myCompleteName)
+  (myNameLength myName)
   )
+
+
